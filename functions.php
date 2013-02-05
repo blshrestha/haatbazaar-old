@@ -8,7 +8,7 @@ function connectdb()
   $hostname = "localhost";
   $database = "Haatbazar";
   $username = "root";
-  $password = "nepalwireless2064";
+  $password = "root";
   $dbcon=mysql_connect($hostname,$username,$password);
   mysql_query("USE ".$database);
   return $dbcon;
