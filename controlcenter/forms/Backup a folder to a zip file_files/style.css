@@ -1,0 +1,14 @@
+A.style{text-decoration:none; font-size:14; font-family:Courier New; color:black}
+A:Visited.style{color:black}
+A:Hover.style{font-size:15; color:blue}
+H2.style{font-weight:normal}
+TD.style{font-size:14; font-family:Courier New; color:black}
+A.style2{text-decoration:none; font-size:13; font-family:Courier New; color:black}
+A:Visited.style2{color:black}
+A:Hover.style2{text-decoration:underline; font-size:13; color:black}
+A.style3{text-decoration:none; font-size:16; font-family:Courier New; color:black}
+A:Visited.style3{color:black}
+A:Hover.style3{font-size:16; color:blue}
+DIV.style{background-color:#578A24; color:white; font-weight:bold; text-decoration:underline}
+DIV.style2{background-color:#CCFF99}
+DIV.style3{font-size:14; font-family:Courier New}

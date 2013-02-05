@@ -1,0 +1,76 @@
+.warning{
+	font-size:16px;
+	background-color:#CCCC00;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+}
+.error{
+	font-size:16px;
+	background-color:#CC0000;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+}
+.item1 {
+	font-size: 16px;
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: #6D9fD8;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+}
+.item2 {
+	font-size: 16px;
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: #99CC00;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.item3 {
+	font-size: 16px;
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: #FF9966;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.item4 {
+	font-size: 16px;
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: #FFCC00;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.item5 {
+	font-size: 16px;
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: #4A5AD2;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.logintable {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background-color: #99CCFF;
+	width: auto;
+	text-align: center;
+	vertical-align: middle;
+	border: thin solid #009900;
+	text-indent: 2pt;
+}
+td {
+	font-size: 14px;
+	color: #333333;
+}
+h1 {
+	font-size: 40px;
+	color: #333333;
+}
+input {
+	height: 25px;
+	vertical-align:middle;
+}
+select {
+	height: 25px;
+	vertical-align:middle;
+}

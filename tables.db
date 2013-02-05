@@ -1,0 +1,36 @@
+CREATE TABLE `item` (
+`id` BIGINT NOT NULL AUTO_INCREMENT ,
+`name` VARCHAR( 50 ) NOT NULL,
+`description` VARCHAR( 255 ) ,
+`categoryid` BIGINT,
+`price` FLOAT,
+`ccid` VARCHAR( 50 ) ,
+`date` DATE,
+PRIMARY KEY ( `id` ) 
+) COMMENT = 'ccid records which cc entered item';
+
+
+CREATE TABLE `itemrequest` (
+`rqid` BIGINT NOT NULL AUTO_INCREMENT ,
+`itemid` BIGINT,
+`ccid` VARCHAR( 50 ) ,
+`date` DATE,
+PRIMARY KEY ( `rqid` ) 
+) COMMENT = 'id: itemid';
+
+
+CREATE TABLE `ccinfo` (
+`ccid` VARCHAR( 50 ) NOT NULL ,
+`password` VARCHAR( 255 ) ,
+`address` VARCHAR( 255 ) ,
+`email` VARCHAR( 255 ) ,
+PRIMARY KEY ( `ccid` ) 
+);
+
+
+ 
+CREATE TABLE `category` (
+`id` BIGINT,
+`name` VARCHAR( 50 ),
+PRIMARY KEY ( `id` )
+);

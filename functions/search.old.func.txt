@@ -1,0 +1,66 @@
+VERSION 1`
+---------------------
+/*
+  seearch item. 
+  PARAMETERS
+  	$field: field to search string on.
+	$value: value to be searched. 
+	$category: category to search on. SPECIAL : ALL <-- to search on all types/cat`s. 
+  RETURNS
+  	the result identifier (from the mysql_query())
+*/
+
+function search($field, $value, $category)
+{
+	$con=connectdb();
+	if($category=="ALL")
+	{
+		$sql="SELECT `id` FROM `item` WHERE `".$field."` LIKE '%".$value."%' ";
+	}
+	else
+	{
+		$findcatidSQL="SELECT `id` FROM `category` WHERE `category`='".$category."' LIMIT 1";
+		$catresult=mysql_query($findcatidSQL,$con)
+					or die('<div class="error"> ERROR, while getting CategoryID <br>'.mysql_error().'</div>');
+		$row=mysql_fetch_array($catresult);
+		if($row=='') die('<div class="error">ERROR, <br><br>Inappropriate Category Supplied<br>');
+		$categoryid=$row[0];
+		$sql="SELECT `id` FROM `item` WHERE `".$field."` LIKE '%".$value."%' AND `categoryid`='".$categoryid."'";
+	}
+	
+	$result=mysql_query($sql,$con)
+		or die('<div class="error"> ERROR while searching<br>'.mysql_error().'</div>');
+	
+	return $result;
+}
+
+VERSION 2
+------------------------
+
+/*
+  seearch item. 
+  PARAMETERS
+  	$field: field to search string on.
+	$value: value to be searched. 
+	$categoryid: id of category to search on. SPECIAL : ALL <-- to search on all types/cat`s. 
+  RETURNS
+  	the result identifier (from the mysql_query())
+*/
+
+function search($field, $value, $categoryid)
+{
+	$con=connectdb();
+	if($categoryid=="ALL")
+	{
+		$sql="SELECT `id`,`name` FROM `item` WHERE `".$field."` LIKE '%".$value."%' ";
+	}
+	else
+	{
+		$sql="SELECT `id`,`name` FROM `item` WHERE `".$field."` LIKE '%".$value."%' AND `categoryid`='".$categoryid."'";
+	}
+	
+	$result=mysql_query($sql,$con)
+		or die('<div class="error"> ERROR while searching in database<br>'.mysql_error().'</div>');
+	
+	return $result;
+}
